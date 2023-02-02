@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib import admin
 from django.conf import settings
 
-from schoolDetails.models import Department
+from school_personnel_details.models import Department
 
 
 # Create your models here.

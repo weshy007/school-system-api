@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
     'accounts',
     'custom',
-    'schoolDetails',
+    'school_personnel_details',
 ]
 
 AUTH_USER_MODEL = 'custom.User'

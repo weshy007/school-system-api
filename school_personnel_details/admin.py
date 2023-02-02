@@ -14,7 +14,7 @@ class SchoolAdmin(admin.ModelAdmin):
     @admin.display(ordering='total_departments')
     def number_of_departments(self, school: School):
         url = (
-                reverse('admin:schoolDetails_department_changelist')
+                reverse('admin:school_personnel_details_department_changelist')
                 + '?'
                 + urlencode({
             'school__id': str(school.id)
