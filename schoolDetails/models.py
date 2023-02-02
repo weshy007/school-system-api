@@ -82,7 +82,7 @@ class StudentHostel(models.Model):
         return self.student.registration_number
 
     @admin.display(ordering='student__registration_number')
-    def reg_no(self):
+    def registration_number(self):
         return self.student.registration_number
 
     @admin.display(ordering='student__first_name')
@@ -115,7 +115,7 @@ class Result(models.Model):
     exam = models.PositiveSmallIntegerField(validators=[MinValueValidator(0), MaxValueValidator(70)])
 
     @admin.display(ordering='student__registration_number')
-    def reg_no(self):
+    def registration_number(self):
         return self.student.registration_number
 
     @admin.display(ordering='unit__unit_code')
@@ -131,9 +131,9 @@ class Attendance(models.Model):
     def __str__(self):
         return self.student.registration_number
 
-    admin.display(ordering='student__reg_no')
+    admin.display(ordering='student__registration_number')
 
-    def reg_no(self):
+    def registration_number(self):
         return self.student.registration_number
 
     @admin.display(ordering='unit__unit_code')
