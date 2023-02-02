@@ -139,4 +139,3 @@ class Attendance(models.Model):
     @admin.display(ordering='unit__unit_code')
     def unit_code(self):
         return self.unit.unit_code
-
