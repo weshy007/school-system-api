@@ -22,7 +22,7 @@ class SchoolAdmin(admin.ModelAdmin):
         return format_html('<a href="{}">{} </a>', url, school.total_departments)
 
     def get_queryset(self, request):
-        return super().get_queryset(request).annotate(total_departments=Count('school'))
+        return super().get_queryset(request).annotate(total_departments=Count('school_name'))
 
 
 @admin.register(Department)
