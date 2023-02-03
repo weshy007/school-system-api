@@ -1,13 +1,13 @@
 from rest_framework import serializers
 
-from models import Department, School, Unit, Hostel, Exam, Result
+from .models import Department, School, Unit, Hostel, Exam, Result
 from accounts.models import Student
 
 
 class StudentDetailsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = ['reg_no', 'first_name', 'last_name']
+        fields = ['registration_number', 'first_name', 'last_name']
 
 
 class DepartmentSerializer(serializers.ModelSerializer):

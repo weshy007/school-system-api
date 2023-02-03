@@ -2,7 +2,7 @@ from rest_framework import serializers
 from django.db.models import Q
 from django.db import transaction
 
-from models import Student, Lecturer
+from .models import Student, Lecturer
 from custom.models import User
 from custom.serializers import UserCreateSerializer
 from school_personnel_details.models import UnitDetails, Hostel, StudentHostel, Result
@@ -33,7 +33,7 @@ class StudentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Student
-        fields = ['id', 'reg_no', 'department', 'user']
+        fields = ['id', 'registration_number', 'department', 'user']
 
 
 class LecturerSerializer(serializers.ModelSerializer):
@@ -117,7 +117,7 @@ class CreateStudentHostelSerializer(serializers.ModelSerializer):
         fields = ['id', 'hostel', 'payment_status']
 
 
-class UpdateStudentSerializer(serializers.ModelSerializer):
+class UpdateStudentHostelSerializer(serializers.ModelSerializer):
     class Meta:
         model = StudentHostel
         fields = ['payment_status']
